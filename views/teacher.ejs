@@ -1,0 +1,35 @@
+<h2>Teachers</h2>
+ <table>
+     <tr>
+     <th>Title</th>
+     <th>Fistname</th>
+     <th>Lastname</th>
+    </tr>
+    <% teachers.forEach(function(teacher){ %>
+    <tr>
+         <td><%= teacher.title%></td>
+        <td><%= teacher.firstname%></td>
+        <td><%= teacher.lastname%></td>
+    </tr>
+    <%  });%>
+ </table>
+
+
+ <form action="/teachers" method="POST">
+    <ul>
+        <li>
+                <input type="text" class="addTeacher" name="title" placeholder="Title">
+        </li>
+        <li>
+                <input type="text" class="addTeacher" name="firstname" placeholder="Firstname">
+        </li>
+        <li>
+                <input type="text" class="addTeacher" name="lastname" placeholder="Lastname">
+        </li>
+    </ul>
+
+<button>Add Teacher</button>
+</form>
+
+
+<a href="/">Go to Homepage</a>

@@ -1,0 +1,31 @@
+<h2>Subjects</h2>
+ <table>
+     <tr>
+     <th>Subject Title</th>
+     <th>Grade</th>
+     <th>Firstname</th>
+     <th>Lastname</th>
+
+    </tr>
+    <% subjects.forEach(function(subject){ %>
+    <tr>
+         <td><%= subject.title%></td>
+         <td><%= subject.grade%></td>
+         <td><%= subject.firstname%></td>
+         <td><%= subject.lastname%></td>
+    </tr>
+    <%  });%>
+ </table>
+
+
+ <form action="/subjects" method="POST">
+     <ul>
+         <li>
+                 <input type="text" class="addSubject" name="title" placeholder="Title">
+         </li>
+     </ul>
+ 
+ <button>Add Subject</button>
+ </form>
+
+ <a href="/">Go to Homepage</a>
